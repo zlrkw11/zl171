@@ -2,6 +2,7 @@
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { ThemeProvider } from "./context/theme";
+import NavBar from "../components/nav/navbar";
 
 export const metadata = {
   title: "zl171",
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" data-bs-theme="dark">
       <body>
+        <NavBar />
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
