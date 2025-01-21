@@ -12,10 +12,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" data-bs-theme="dark">
-      <body>
-        <NavBar />
-        <ThemeProvider>{children}</ThemeProvider>
-      </body>
+      <ThemeProvider>
+        <body>
+          <NavBar />
+          {children}
+        </body>
+      </ThemeProvider>
     </html>
   );
 }
