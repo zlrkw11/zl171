@@ -6,6 +6,7 @@ export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState();
   useEffect(() => {
     document.documentElement.setAttribute("data-bs-theme", theme);
+    localStorage.setItem("theme", theme);
   }, [theme]);
   const toggleTheme = () => {
     return setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
