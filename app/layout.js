@@ -1,6 +1,7 @@
 //import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { ThemeProvider } from "./context/theme";
 
 export const metadata = {
   title: "zl171",
@@ -10,7 +11,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" data-bs-theme="dark">
-      <body>{children}</body>
+      <body>
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   );
 }
